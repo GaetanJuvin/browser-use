@@ -1,0 +1,10 @@
+pub mod client;
+pub mod host;
+pub mod registry;
+pub mod wire;
+pub use client::{Client, Options};
+pub mod browser;
+pub mod cli;
+pub mod mcp;
+pub mod setup;
+pub use browser::{Browser, Tab};

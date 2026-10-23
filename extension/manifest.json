@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Use \u2014 Rust",
+  "description": "Control your real Chrome tabs through the Browser Use Rust CLI, SDK and MCP server.",
+  "version": "0.1.0",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Browser Use",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'self';"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/cursor-chat.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "permissions": [
+    "alarms",
+    "debugger",
+    "downloads",
+    "downloads.ui",
+    "history",
+    "nativeMessaging",
+    "scripting",
+    "storage",
+    "tabGroups",
+    "tabs"
+  ]
+}
